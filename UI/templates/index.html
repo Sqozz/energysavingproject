@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>TITLE</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	</head>
+	<body>
+		<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+		<div id="content">
+			
+			{% for device in plugs %}
+				
+				<div id="" class="device">
+					<div class="name {{ plugs[device]["lastState"] }}">
+						{{ plugs[device]["displayName"] }}
+					</div>
+					<div class="controls">
+						<span class="toggle">
+							<input type="checkbox">
+							<label data-off="An" data-on="Aus"></label>
+						</span>
+					</div>
+				</div>
+			{% endfor %}
+			<form action="new" method="post">
+				<button>NEW</button>
+			</form>
+		</div>
+	</body>
+</html>

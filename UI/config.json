@@ -1,0 +1,18 @@
+{ "plugs" : {
+		"steckdoseBad" : {
+			"displayName" : "Steckdose Bad",
+			"wirelessId"  : "001001",
+			"lastState"   : "on"
+		},
+		"steckdoseZimmer" : {
+			"displayName" : "Steckdose Zimmer",
+			"wirelessId"  : "001010",
+			"lastState"   : "on"
+		},
+		"steckdoseWohnzimmer" : {
+			"displayName" : "Steckdose Wohnzimmer",
+			"wirelessId"  : "001010",
+			"lastState"   : "off"
+		}
+	}
+}
