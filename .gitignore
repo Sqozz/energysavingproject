@@ -1,0 +1,7 @@
+*build*
+*.swp
+*.swo
+*.od*
+*.svg
+*__pycache__
+*.swn
