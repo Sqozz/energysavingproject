@@ -20,10 +20,16 @@ def createNew():
 @app.route("/switchPlug", methods=['POST'])
 def switchPlug():
     turnOn = request.form['newState']
+    deviceno=1
+    default_key = [1,1,0,0,1]
+    default_pin = 17
+    device = RemoteSwitch(device=deviceno, key=default_key, pin=default_pin)
     if turnOn == "true":
-        print("turn plug " + request.form['plugName'] + " on")
+        device.switchOn()
+        print("switching on")
     else:
-        print("turn plug " + request.form['plugName'] + " off")
+        device.switchOff()
+        print("switching off")
     return 'ok'
 
 class Config():
