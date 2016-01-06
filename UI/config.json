@@ -1,7 +1,8 @@
 { "plugs" : {
 		"steckdoseBad" : {
 			"displayName" : "Steckdose Bad",
-			"wirelessId"  : "001001",
+			"wirelessId"  : "11001",
+			"deviceNo"    : "1",
 			"lastState"   : "on"
 		},
 		"steckdoseZimmer" : {

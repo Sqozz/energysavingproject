@@ -8,16 +8,14 @@
 	<body>
 		<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 		<div id="content">
-			
 			{% for device in plugs %}
-				
 				<div id="" class="device">
 					<div class="name {{ plugs[device]["lastState"] }}">
 						{{ plugs[device]["displayName"] }}
 					</div>
 					<div class="controls">
 						<span class="toggle">
-							<input type="checkbox">
+							<input type="checkbox" onclick="switchPlug('{{device}}', this.checked);">
 							<label data-off="An" data-on="Aus"></label>
 						</span>
 					</div>

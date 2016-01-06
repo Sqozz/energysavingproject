@@ -1,14 +1,16 @@
-var http = new XMLHttpRequest()
-var url = "/new"
-var params = "name=foobar"
-http.open("POST", url, true)
+function switchPlug(plugName, state) {
+	var http = new XMLHttpRequest()
+	var url = "/switchPlug"
+	var params = "newState=" + state + "&plugName=" + plugName
+	http.open("POST", url, true)
 
-http.setRequestHeader("Content-length", params.length);
-http.setRequestHeader("Connection", "close");
+	http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	http.setRequestHeader("Content-length", params.length);
+	http.setRequestHeader("Connection", "close");
 
-http.onreadystatechange = function() {
-	if(http.readyState == 4 && http.status == 200) {
-		alert(http.responseText);
+	http.onreadystatechange = function() {
+		if(http.readyState == 4 && http.status == 200) {
+		}
 	}
+	http.send(params);
 }
-http.send(params);
